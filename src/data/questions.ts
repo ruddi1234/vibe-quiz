@@ -55,5 +55,60 @@ export const questions: Question[] = [
       "Road trip"
     ],
     correctAnswer: 0
+  },
+  {
+    id: 6,
+    question: "Which pet do you prefer?",
+    options: [
+      "Dog",
+      "Cat",
+      "Bird",
+      "None"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 7,
+    question: "What’s your go-to beverage?",
+    options: [
+      "Coffee",
+      "Tea",
+      "Juice",
+      "Soda"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 8,
+    question: "What motivates you the most?",
+    options: [
+      "Success",
+      "Helping others",
+      "Creativity",
+      "Freedom"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 9,
+    question: "What kind of movies do you enjoy?",
+    options: [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Documentary"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 10,
+    question: "What’s your favorite time of day?",
+    options: [
+      "Morning",
+      "Afternoon",
+      "Evening",
+      "Night"
+    ],
+    correctAnswer: 0
   }
-] 
+]
