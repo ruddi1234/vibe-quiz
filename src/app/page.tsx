@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { createUserProfile } from './actions'
@@ -62,7 +62,7 @@ export default function Home() {
         if (authError) throw authError
 
         if (authData.user) {
-          const { success, error: profileError } = await createUserProfile(
+          const { success } = await createUserProfile(
             authData.user.id,
             name,
             email
@@ -75,9 +75,9 @@ export default function Home() {
           setMessage('Please check your email for confirmation link. After confirming, you can sign in.')
         }
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Authentication error:', err)
-      setError(err.message || 'An error occurred during authentication')
+      setError(err instanceof Error ? err.message : 'An error occurred during authentication')
     } finally {
       setLoading(false)
     }

@@ -178,8 +178,6 @@ export default function Quiz() {
             throw new Error(error.message || 'Failed to update score');
           }
 
-          const updatedUser = await response.json();
-
           const { data: potentialMatches, error: matchesError } = await supabase
             .from('users')
             .select('*')

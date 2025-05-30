@@ -52,9 +52,9 @@ export async function GET(
         }
       }
     )
-  } catch (error) {
+  } catch (e) {
     return new NextResponse(
-      JSON.stringify({ error: 'Internal Server Error' }),
+      JSON.stringify({ error: `Internal Server Error: ${e}` }),
       { 
         status: 500,
         headers: {
@@ -103,9 +103,9 @@ export async function PATCH(
         }
       }
     )
-  } catch (error) {
+    } catch (e) {
     return new NextResponse(
-      JSON.stringify({ error: 'Internal Server Error' }),
+      JSON.stringify({ error: `Internal Server Error: ${e}` }),
       { 
         status: 500,
         headers: {
